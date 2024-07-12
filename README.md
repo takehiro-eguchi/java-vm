@@ -17,9 +17,19 @@ java -XX:+PrintFlagsFinal -XX:+UnlockDiagnosticVMOptions -version
 java -XX:+PrintFlagsFinal -XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimentalVMOptions -version
 ```
 
-# JITコンパイラの確認プロジェクト
+# JITコンパイラの確認
 `JITCompilerSample`を実行することにより確認することができます。
 
 |JVMオプション|説明|
 |-XX:+PrintCompilation|メソッドがコンパイルされたことをログ出力する|
 |-XX:CompileThreshold=n|メソッドがネイティブコードへコンパイルされるしきい値|
+
+# GCの確認
+`GCSample`を実行することにより確認することができます。
+
+|JVMオプション|説明|
+|`-XX:+UseSerialGC`|シリアルGC|
+|`-XX:+UseSerialGC`|パラレルGC|
+|`-XX:+UseG1GC`|G1GC|
+|`-XX:+UseZGC`|ZGC|
+

@@ -3,8 +3,9 @@
  */
 public class JITCompilerSample {
 
-	private static final int LOOP_COUNT = 100_000;
-	private static final int SPLIT_TERM = 500;
+	// 定数
+	public static final int LOOP_COUNT = 100_000;
+	public static final int SPLIT_TERM = 500;
 	
 	public static void main(String[] args) {
 		
@@ -25,7 +26,8 @@ public class JITCompilerSample {
 		}
 	}
 
-	private static void execute(int i) {
+	/** 実行 */
+	public static String execute(int i) {
 		// とある文字が大量に続く文字列を作成する
 		 int ch = 'a' + (char)(i % 25);
 		StringBuilder builder = new StringBuilder();
@@ -33,7 +35,6 @@ public class JITCompilerSample {
 			builder.append((char)ch);
 		}
 		
-		@SuppressWarnings("unused")
-		String text = builder.toString();
+		return builder.toString();
 	}
 }
