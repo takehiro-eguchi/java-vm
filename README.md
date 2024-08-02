@@ -28,8 +28,9 @@ java -XX:+PrintFlagsFinal -XX:+UnlockDiagnosticVMOptions -XX:+UnlockExperimental
 `GCSample`を実行することにより確認することができます。
 
 |JVMオプション|説明|
+|---|---|
 |`-XX:+UseSerialGC`|シリアルGC|
-|`-XX:+UseSerialGC`|パラレルGC|
+|`-XX:+UseParallelGC`|パラレルGC|
 |`-XX:+UseG1GC`|G1GC|
 |`-XX:+UseZGC`|ZGC|
 
